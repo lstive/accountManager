@@ -11,8 +11,8 @@ class Configer{
 	/**
 	 * @param name - nombre del archivo .json
 	 */
-	constructor(name){
-		this.path = app.getPath('home');
+	constructor(name, path){
+		this.path = path;
 		this.file = name;
 	}
 
@@ -21,6 +21,9 @@ class Configer{
 	 */
 	setConfig(config){
 		try{
+			if(!fs.existsSync(this.path)){
+				fs.mkdirSync(this.path);
+			}
 			fs.writeFileSync(path.join(this.path, this.file), JSON.stringify(config));
 		}catch(err){
 			throw err;

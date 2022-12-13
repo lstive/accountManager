@@ -25,17 +25,17 @@ function createWindow(){
 
 // starting the window
 app.whenReady().then(createWindow);
-let config = new Configer('config.json');
+let config = new Configer('config.json', path.join(app.getPath('home'), '.config_acount'));
 let prop = {
 	db_name:'pass_database.db',
-	db_path:app.getPath('home'),
+	db_path:path.join(app.getPath('home'), '.config_acount'),
 	db_exist:false
 };
 
 if(!fs.existsSync(path.join(prop.db_path, prop.db_name))){
 	console.log('el archivo de configuracion no existe sera creado');
 	config.setConfig(prop);
-	console.log(config.getConfig());
+	//console.log(config.getConfig());
 }else{
 	console.log('el archivo de configuracion ya existe');
 }
