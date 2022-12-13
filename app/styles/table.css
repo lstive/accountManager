@@ -1,0 +1,37 @@
+#table-usuario{
+	width:100%;
+	border-collapse:collapse;
+	
+}
+
+.main-content > div:first-child{
+	height:60%;
+	overflow:auto;
+}
+
+th{
+	background-color:#b18bff;
+	color:#ffffff;
+	padding:2%;
+	
+}
+
+td{
+	padding:1%;
+}
+
+#table-usuario tr:first-child{
+	border-bottom:4px solid #845eff;
+	position:sticky;
+	/* hay que agregar esa propiedad */
+	top:0px;
+}
+
+.main-content > div:last-child{
+	height:40%;
+	overflow:auto;
+}
+
+.table-crud{
+	width:100%;
+}

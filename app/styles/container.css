@@ -1,0 +1,45 @@
+.single-container{
+	background-color:#ffffff;
+	padding:1%;
+	margin:1%;
+}
+
+.session-container{
+	background-color:#ffffff;
+	padding:1%;
+	margin:1%;
+
+	width:30%;
+	margin-left:auto;
+	margin-right:auto;
+
+	position:relative;
+	margin-top:auto;
+	margin-bottom:auto;
+	top:15%;
+	min-height:55%;
+	overflow:auto;
+}
+
+.session-container > div > label{
+	display:block;
+}
+
+.session-container > div{
+	margin:6%;
+}
+
+.left-panel{
+	float:left;
+	background-color:#7690a0;
+	width:20%;
+	height:100%;
+}
+
+.main-content{
+	float:left;
+	background-color:#ffffff;
+	width:76%;
+	height:90%;
+	padding:2%;
+}

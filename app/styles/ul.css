@@ -1,0 +1,16 @@
+ul{
+	list-style-position:inside;
+	list-style-type:none;
+	margin-left:-40px;
+}
+
+ul > li{
+	float:left;
+	width:100%;
+	margin-left:0px;
+	color:#ffffff;
+}
+
+.active{
+	background-color:#5976a0;
+}

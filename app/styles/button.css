@@ -1,0 +1,14 @@
+button{
+	background-color:#7d93ff;
+	color:#ffffff;
+	border-style:none;
+	font-weight:bold;
+	width:30%;
+	margin:0% 2% 0% 2%;
+	float:left;
+	padding:2%;
+}
+
+button:hover{
+	background-color:#ffd6c8;
+}

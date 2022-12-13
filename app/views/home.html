@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Account</title>
+	<link href="../styles/style.css" rel="stylesheet" />
+</head>
+<body style="margin:0px; height:100%;">
+	<div class='left-panel'>
+		<h2>Home</h2>
+		<ul>
+			<li class="active"><a href="">cuentas</a></li>
+			<li><a href="">usuarios</a></li>
+		</ul>
+	</div>
+	<div class='main-content'>
+		<div>
+			<table id="table-usuario">
+				<tr>
+					<th>id</th>
+					<th>correo</th>
+					<th>password</th>
+					<th></th>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<table class="table-crud">
+				<tr>
+					<td><label for="">correo</label></td>
+					<td><input name="user" type="text" value="" /></td>
+					<td><label for="">password</label></td>
+					<td><input name="pass" type="text" value="" /></td>
+				</tr>
+				<tr>
+					<td colspan='3'><button id='button-add'>agregar</button><button id='button-update'>actualizar</button></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<script>
+	let rows = document.querySelectorAll('#table-usuario tr');
+		console.log(rows);
+		for(let i = 0; i < rows.length; i++){
+			if(i % 2 == 0){
+				rows[i].style.backgroundColor = '#f2ffde';
+			}
+		}
+	</script>
+	<script src="../scripts/query/query.js"></script>
+</body>
+
+</html>
