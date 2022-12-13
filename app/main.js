@@ -222,3 +222,21 @@ ipcMain.on('delete-cuenta', (event, data) => {
 
 	event.reply('refresh-cuenta', null);
 });
+
+ipcMain.on('update-cuenta', (event, data) => {
+	// buscando la cuenta
+	(async () => {
+		let cuenta = await Cuenta.findOne({
+			where:{
+				id:data.id
+			}
+		});
+
+		cuenta.update({
+			correo:data.correo,
+			pass:Buffer.from(data.pass).toString('base64')
+		});
+	})();
+
+	event.reply('update-cuenta-res', null);
+});
