@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import 'container.css';
+@import 'image.css';
+@import 'h.css';
+@import 'input.css';
+@import 'label.css';
+@import 'button.css';
+@import 'ul.css';
+@import 'a.css';
+@import 'table.css';
+
+html{
+	height:100%;
+}
+
+body{
+	height:90%;
+	font-size:16px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.background-app{
+	background-image:linear-gradient(20deg, #ffd6c8, #7d93ff);
+}
+
+hr{
+	width:90%;
+}
