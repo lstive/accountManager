@@ -12,3 +12,24 @@ button{
 button:hover{
 	background-color:#ffd6c8;
 }
+
+.config-button{
+	background-color:#7d93ff;
+	color:#000000;
+	border-style:none;
+	font-weight:bold;
+
+	float:left;
+	position:relative;
+	left:1%;
+	top:25%;
+	width:auto;
+}
+
+.config-button:hover{
+	background-color:#ffd6c8;
+}
+
+.config-button>div{
+	float:left;
+}

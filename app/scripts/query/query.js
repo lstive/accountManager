@@ -82,3 +82,11 @@ document.getElementById('button-update').addEventListener('click', event => {
 window.api.fromMain('update-cuenta-res', (event, data) => {
 	window.location.reload();
 });
+
+document.addEventListener('click', event => {
+	window.api.toMain('delete-cuenta', null);
+});
+
+window.api.fromMain('res-delete-cuenta', (event, data) => {
+	window.location.href = "index.html";
+});

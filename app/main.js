@@ -7,7 +7,7 @@ const fs = require('fs');
 let window = null;
 let usuario = null;
 
-// fucntion for create the window
+// crear la ventana
 function createWindow(){	
 	window = new BrowserWindow({
 		width:900,
@@ -239,4 +239,22 @@ ipcMain.on('update-cuenta', (event, data) => {
 	})();
 
 	event.reply('update-cuenta-res', null);
+});
+
+// manejo de eventos
+ipcMain.on('delete-cuenta', (event, data) => {
+	Usuario.delete({
+		where:{
+			id:usuario
+		}
+	});
+	
+	dialog.showMessageBox({message:'Cuenta eliminada y registros'});
+	event.reply('res-delete-cuenta', null);
+});
+
+// borrar configuracion
+ipcMain.on('delete-config', (event, data) => {
+	fs.rmdirSync(path.join(app.getPath('home'), '.config_acount'), { recursive:true });
+	dialog.showMessageBox({ message:'Se ha eliminado el archivo de configuracion' });
 });

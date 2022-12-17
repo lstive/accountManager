@@ -16,3 +16,7 @@ window.api.fromMain('res-sesion', (event, data) => {
 	window.location.href = 'home.html';
 });
 
+// event borrar configuracion
+document.getElementsByClassName('config-button')[0].addEventListener('click', event => {
+	window.api.toMain('delete-config', null);
+});
