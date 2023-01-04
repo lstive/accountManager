@@ -5,13 +5,21 @@
   "main": "app/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron app/main.js"
+      "start": "electron app/main.js",
+	  "dist": "electron-builder"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^22.0.0",
+      
     "sequelize": "^6.26.0",
     "sqlite3": "^5.1.2"
-  }
+  },
+	"devDependencies": {
+		"electron": "^22.0.0",
+		"electron-builder": "^23.6.0"
+	},
+	"build": {
+		"icon": "./app/icon.png"
+	}
 }
