@@ -4,6 +4,7 @@ const path = require('path');
 const { Configer } = require('./scripts/configer.js');
 const fs = require('fs');
 
+// globals
 let window = null;
 let usuario = null;
 
@@ -84,6 +85,7 @@ try{
 	
 }
 
+// creacion de los modelos
 class Usuario extends Model{}
 class Cuenta extends Model{}
 
